@@ -35,4 +35,12 @@ public class BusTest{
     assertEquals(true, bus.isFull());
   }
 
+  @Test
+  public void busStopsPickingUpWhenFull(){
+    for (int i = 0; i < 15; i++){
+      bus.pickUpPassenger(person);
+    }
+    assertEquals(10, bus.countPassengers());
+  }
+
 }
