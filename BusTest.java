@@ -14,6 +14,11 @@ public class BusTest{
     assertEquals(44, bus.getRouteNumber());
   }
 
+  @Test
+  public void busStartsWithNoPassengers(){
+    assertEquals(0, bus.countPassengers());
+  }
+
 
 
 }
