@@ -56,4 +56,13 @@ public class BusStopTest{
     assertEquals(0, busStop.countQueue());
   }
 
+  @Test
+  public void commutersNotFittingOnBusStayAtStop(){
+    for (int i = 0; i < 12; i++){
+      busStop.newCommuter(person);
+    }
+    bus.collectFromStop(busStop);
+    assertEquals(2, busStop.countQueue());
+  }//doesn't work - why?
+
 }

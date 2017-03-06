@@ -37,10 +37,16 @@ class Bus{
 
   public void collectFromStop(BusStop busStop){
     Person[] passengersToCollect = busStop.getQueue();
+    busStop.clearQueue();
+    
     for (Person person : passengersToCollect){
       pickUpPassenger(person);
+      if (isFull()){
+        busStop.newCommuter(person); //this bit doesn't work... why!
+      }
+      
     }
-    busStop.clearQueue();
+    
   }
 
 }
