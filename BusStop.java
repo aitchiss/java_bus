@@ -16,4 +16,10 @@ class BusStop{
     return count;
   }
 
+  public void newCommuter(Person person){
+    int index = countQueue();
+    queue[index] = person;
+
+  }
+
 }
