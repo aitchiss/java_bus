@@ -30,5 +30,13 @@ public class BusStopTest{
     assertEquals(true, busStop.isQueueFull());
   }
 
+  @Test
+  public void newCommuterStopsIncrementingQueueWhenFull(){
+    for (int i = 0; i < 20; i++){
+      busStop.newCommuter(person);
+    }
+    assertEquals(12, busStop.countQueue());
+  }
+
 
 }

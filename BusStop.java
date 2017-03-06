@@ -17,6 +17,9 @@ class BusStop{
   }
 
   public void newCommuter(Person person){
+    if (isQueueFull()){
+      return;
+    }
     int index = countQueue();
     queue[index] = person;
 
