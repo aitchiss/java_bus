@@ -63,6 +63,6 @@ public class BusStopTest{
     }
     bus.collectFromStop(busStop);
     assertEquals(2, busStop.countQueue());
-  }//doesn't work - why?
+  }
 
 }

@@ -42,6 +42,9 @@ class Bus{
     for (int i = 0; i < numberInQueue; i++){
       Person person = new Person();
       pickUpPassenger(person);
+      if (i >= passengers.length){
+        busStop.newCommuter(person);
+      }
     }
       
     
