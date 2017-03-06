@@ -23,6 +23,10 @@ class Bus{
     return count;
   }
 
+  public boolean isFull(){
+    return countPassengers() == passengers.length;
+  }
+
   public void pickUpPassenger(Person person){
     int index = countPassengers();
     passengers[index] = person;
