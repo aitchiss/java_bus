@@ -4,11 +4,13 @@ import org.junit.*;
 public class BusStopTest{
   BusStop busStop;
   Person person;
+  Bus bus;
 
   @Before
   public void before(){
     busStop = new BusStop();
     person = new Person();
+    bus = new Bus(44);
   }
 
   @Test
@@ -45,5 +47,13 @@ public class BusStopTest{
     assertEquals(0, busStop.countQueue());
   }
 
+  @Test
+  public void collectFromStopClearsBusStopQueue(){
+    for (int i = 0; i < 6; i++){
+      busStop.newCommuter(person);
+    }
+    bus.collectFromStop(busStop);
+    assertEquals(0, busStop.countQueue());
+  }
 
 }

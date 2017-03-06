@@ -52,6 +52,7 @@ public class BusTest{
     assertEquals(1, bus.countPassengers());
   }
 
+  @Test
   public void busPicksUpMultipleCommutersFromStop(){
     for (int i = 0; i < 6; i++){
       busStop.newCommuter(person);
@@ -60,12 +61,6 @@ public class BusTest{
     assertEquals(6, bus.countPassengers());
   }
 
-  public void collectFromStopClearsBusStopQueue(){
-    for (int i = 0; i < 6; i++){
-      busStop.newCommuter(person);
-    }
-    bus.collectFromStop(busStop);
-    assertEquals(0, busStop.countQueue());
-  }
+ 
 
 }
