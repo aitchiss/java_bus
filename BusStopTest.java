@@ -38,5 +38,12 @@ public class BusStopTest{
     assertEquals(12, busStop.countQueue());
   }
 
+  @Test
+  public void clearQueueClearsAllCommuters(){
+    busStop.newCommuter(person);
+    busStop.clearQueue();
+    assertEquals(0, busStop.countQueue());
+  }
+
 
 }

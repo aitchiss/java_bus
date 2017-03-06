@@ -33,4 +33,10 @@ class BusStop{
     return this.queue;
   }
 
+  public void clearQueue(){
+    for (int i = 0; i < queue.length; i++){
+      queue[i] = null;
+    }
+  }
+
 }
