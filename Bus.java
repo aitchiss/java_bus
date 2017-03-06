@@ -40,7 +40,7 @@ class Bus{
     for (Person person : passengersToCollect){
       pickUpPassenger(person);
     }
-    
+    busStop.clearQueue();
   }
 
 }

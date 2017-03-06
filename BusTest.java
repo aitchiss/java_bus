@@ -60,12 +60,12 @@ public class BusTest{
     assertEquals(6, bus.countPassengers());
   }
 
-  // public void collectFromStopClearsBusStopQueue(){
-  //   for (int i = 0; i < 6; i++){
-  //     busStop.newCommuter(person);
-  //   }
-  //   bus.collectFromStop(busStop);
-  //   assertEquals(0, busStop.countQueue());
-  // }
+  public void collectFromStopClearsBusStopQueue(){
+    for (int i = 0; i < 6; i++){
+      busStop.newCommuter(person);
+    }
+    bus.collectFromStop(busStop);
+    assertEquals(0, busStop.countQueue());
+  }
 
 }
