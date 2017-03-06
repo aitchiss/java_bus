@@ -22,4 +22,8 @@ class BusStop{
 
   }
 
+  public boolean isQueueFull(){
+    return countQueue() == queue.length;
+  }
+
 }
