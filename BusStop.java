@@ -29,9 +29,7 @@ class BusStop{
     return countQueue() == queue.length;
   }
 
-  public Person[] getQueue(){
-    return this.queue;
-  }
+  
 
   public void clearQueue(){
     for (int i = 0; i < queue.length; i++){
@@ -39,6 +37,6 @@ class BusStop{
     }
   }
 
-  
+
 
 }
