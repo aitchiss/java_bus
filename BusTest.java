@@ -52,4 +52,12 @@ public class BusTest{
     assertEquals(1, bus.countPassengers());
   }
 
+  public void busPicksUpMultipleCommutersFromStop(){
+    for (int i = 0; i < 6; i++){
+      busStop.newCommuter(person);
+    }
+    bus.collectFromStop(busStop);
+    assertEquals(6, bus.countPassengers());
+  }
+
 }
