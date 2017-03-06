@@ -4,11 +4,13 @@ import org.junit.*;
 public class BusTest{
   Bus bus;
   Person person;
+  BusStop busStop;
 
   @Before
   public void before(){
     bus = new Bus(44);
     person = new Person();
+    busStop = new BusStop();
   }
 
   @Test
@@ -41,6 +43,13 @@ public class BusTest{
       bus.pickUpPassenger(person);
     }
     assertEquals(10, bus.countPassengers());
+  }
+
+  @Test
+  public void busPicksUpFromBusStop(){
+    busStop.newCommuter(person);
+    bus.collectFromStop(busStop);
+    assertEquals(1, bus.countPassengers());
   }
 
 }

@@ -35,4 +35,11 @@ class Bus{
     passengers[index] = person;
   }
 
+  public void collectFromStop(BusStop busStop){
+    Person[] passengersToCollect = busStop.getQueue();
+    for (Person person : passengersToCollect){
+      pickUpPassenger(person);
+    }
+  }
+
 }

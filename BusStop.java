@@ -29,4 +29,8 @@ class BusStop{
     return countQueue() == queue.length;
   }
 
+  public Person[] getQueue(){
+    return this.queue;
+  }
+
 }
