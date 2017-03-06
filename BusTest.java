@@ -3,10 +3,12 @@ import org.junit.*;
 
 public class BusTest{
   Bus bus;
+  Person person;
 
   @Before
   public void before(){
     bus = new Bus(44);
+    person = new Person();
   }
 
   @Test
@@ -19,6 +21,10 @@ public class BusTest{
     assertEquals(0, bus.countPassengers());
   }
 
-
+  @Test
+  public void busAddsPassenger(){
+    bus.pickUpPassenger(person);
+    assertEquals(1, bus.countPassengers());
+  }
 
 }
